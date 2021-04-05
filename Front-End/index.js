@@ -16,29 +16,14 @@ app.use(
   swaggerUi.setup(swaggerDocument),
 );
 
-//documentation page
-app.get("/doc", (req, res) => {
-  res.sendFile(__dirname + "/documentation.html");
-});
-
 //home page
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(__dirname + "/home.html");
 });
 
-//login page
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/login.html");
-});
-
 //profile page
-app.get("/profile", (req, res) => {
+app.get("/profle", (req, res) => {
   res.sendFile(__dirname + "/profile.html");
-});
-
-//register page
-app.get("/register", (req, res) => {
-  res.sendFile(__dirname + "/register.html");
 });
 
 //stats page for requests
@@ -46,9 +31,9 @@ app.get("/stats", (req, res) => {
   res.sendFile(__dirname + "/admin.html");
 });
 
-//location page
-app.get("/location", (req, res) => {
-  res.sendFile(__dirname + "/location.html");
+//documentation page
+app.get("/doc", (req, res) => {
+  res.sendFile(__dirname + "/documentation.html");
 });
 
 //logsout to login page
